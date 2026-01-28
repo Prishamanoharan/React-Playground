@@ -9,7 +9,7 @@ import FormValidation from './components/Form';
 import Greeting from './components/Greeting';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import ThemeSwitcher from './components/ThemeSwitcher';
-import Page from './components/Page';
+import Page from './components/page';
 import ThemeContext from './context/ThemeContext';
 import LanguageContext from './context/LanguageContext';
 
