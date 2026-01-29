@@ -1,10 +1,26 @@
 import React, { useState } from "react";
-
+import { useEffect } from "react";
 const Overall = () => {
   const [hp, setHp] = useState(296.48);
   const [count, setCount] = useState(0);
   const [name, setName] = useState("");
   const [answer, setAnswer] = useState("");
+
+  const handleUpgradeEngine = () => {
+    setHp((prev) => {
+      const newHp = prev + 10;
+      console.log("HP upgraded to:", newHp);
+      return newHp;
+    });
+  };
+
+  const handleIncreaseCount = () => {
+    setCount((prev) => {
+      const newCount = prev + 1;
+      console.log("Count updated:", newCount);
+      return newCount;
+    });
+  };
 
   return (
     <div className="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700">
@@ -22,7 +38,7 @@ const Overall = () => {
           <p className="text-slate-500 mb-4">Current Horsepower</p>
 
           <button
-            onClick={() => setHp((prev) => prev + 10)}
+            onClick={handleUpgradeEngine}
             className="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-2xl font-bold shadow-lg shadow-primary-200 dark:shadow-none transition-all"
           >
             Upgrade Engine
@@ -38,7 +54,7 @@ const Overall = () => {
           </div>
 
           <button
-            onClick={() => setCount((prev) => prev + 1)}
+            onClick={handleIncreaseCount}
             className="px-8 py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-900 dark:text-white rounded-2xl font-bold transition-colors"
           >
             Increase Count

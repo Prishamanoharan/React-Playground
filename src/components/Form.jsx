@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const FormValidation = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +10,7 @@ const FormValidation = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Registered: ${formData.name}`);
+    console.log("Form Data:", formData.name, formData.email, formData.password );
   };
 
   return (
@@ -68,7 +69,7 @@ const FormValidation = () => {
           type="submit"
           className="w-full py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-black text-lg hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors mt-4"
         >
-          Create Account
+          Submit
         </button>
 
         <p className="text-center text-sm text-slate-500">

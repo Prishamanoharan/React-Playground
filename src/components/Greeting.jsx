@@ -8,16 +8,16 @@ const Greeting = () => {
   const { language } = context;
 
   const greetings = {
-    en: "Hello, User!",
-    ta: "வணக்கம், பயனர்!",
-    hi: "नमस्ते, उपयोगकर्ता!",
-    ml: "ഹലോ, ഉപയോക്താവ്!",
+    en: "Hello, ",
+    ta: "வணக்கம்,",
+    hi: "नमस्ते,",
+    ml: "ഹലോ,",
   };
 
   return (
     <div className="mb-4">
       <h2 className="text-4xl font-black text-slate-900 dark:text-white">
-        {greetings[language]}
+        {greetings[language] || greetings["en"]} User!
       </h2>
       <p className="text-slate-500 mt-2">
         Personalized experience active.

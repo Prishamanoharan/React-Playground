@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Overall from './components/Counter';
-import Posts from './components/User';
+import Posts from './components/Fetch';
 import FeedbackBoard from './components/FeedbackBoard';
 import FormValidation from './components/Form';
 import Greeting from './components/Greeting';
